@@ -47,5 +47,5 @@ Feel free to open issues or PRs if you find any bugs or have suggestions for imp
 
 ## License
 
-[License Name]
+SLVideoToGif is an open-source software licensed under the MIT license.
 
