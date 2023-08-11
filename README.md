@@ -1,40 +1,51 @@
-<a href="https://supportukrainenow.org/"><img src="https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct.svg" width="100%"></a>
+# Video to GIF Converter for Sign Language
 
-------
+This repository provides tools for converting videos into GIFs with embedded subtitles. The primary use case is for sign language videos, with the subtitles derived from the filenames of the videos.
 
-<p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" />
-</p>
+## Features
 
-<p align="center">
-  <a href="https://github.com/laravel-zero/framework/actions"><img src="https://github.com/laravel-zero/laravel-zero/actions/workflows/tests.yml/badge.svg" alt="Build Status"></img></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/dt/laravel-zero/framework.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/v/laravel-zero/framework.svg?label=stable" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://img.shields.io/packagist/l/laravel-zero/framework.svg" alt="License"></a>
-</p>
+- Convert videos in multiple formats to GIFs.
+- Extract subtitles from associated subtitle files.
+- Generate GIFs with subtitles based on video filenames.
+- Customizable output directory structure.
 
-<h4> <center>This is a <bold>community project</bold> and not an official Laravel one </center></h4>
+## Usage
 
-Laravel Zero was created by [Nuno Maduro](https://github.com/nunomaduro) and [Owen Voke](https://github.com/owenvoke), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
+To use the command-line tool:
 
-- Built on top of the [Laravel](https://laravel.com) components.
-- Optional installation of Laravel [Eloquent](https://laravel-zero.com/docs/database/), Laravel [Logging](https://laravel-zero.com/docs/logging/) and many others.
-- Supports interactive [menus](https://laravel-zero.com/docs/build-interactive-menus/) and [desktop notifications](https://laravel-zero.com/docs/send-desktop-notifications/) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](https://laravel-zero.com/docs/task-scheduling/) and  a [Standalone Compiler](https://laravel-zero.com/docs/build-a-standalone-application/).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
+```bash
+php artisan app:convert-video-to-gif [inputDirectory] [--outputDir=./output_gifs/signs]
+```
 
-------
+Where:
 
-## Documentation
+- `inputDirectory` is the directory containing the videos you wish to convert.
+- `--outputDir` is an optional argument specifying the output directory for the generated GIFs. The default is `./output_gifs/signs`.
 
-For full documentation, visit [laravel-zero.com](https://laravel-zero.com/).
+## Setup
 
-## Support the development
-**Do you like this project? Support it by donating**
+1. Clone this repository:
+```bash
+git clone [repository_url]
+```
 
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
-- Patreon: [Donate](https://www.patreon.com/nunomaduro)
+2. Navigate to the project directory and install dependencies:
+```bash
+composer install
+```
+
+3. Run the command as described in the usage section.
+
+## Notes
+
+- The subtitles for the sign language GIFs are derived from the video filenames. It's recommended to name the videos appropriately to ensure accurate subtitles.
+- Ensure that the video filenames don't have any special characters or unnecessary numbers. The tool will clean the filenames to generate the subtitles.
+
+## Contributing
+
+Feel free to open issues or PRs if you find any bugs or have suggestions for improvements!
 
 ## License
 
-Laravel Zero is an open-source software licensed under the MIT license.
+[License Name]
+
